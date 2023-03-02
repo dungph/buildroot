@@ -1,3 +1,13 @@
+"a) Tìm hiểu và sử dụng công cụ buildroot để tạo hệ điều hành Linux nhúng cho lõi ARM. Test HĐH trên máy ảo Qemu. 
+ Trên HĐH vừa build, xây dựng một system call cho phép hiển thị thông tin của các tiến trình có state là RUNNING hoặc RUNNABLE dưới dạng danh sách liên kết của struct proc_info. Struct proc_info được định nghĩa như sau:
+ Struct proc_info{
+  Node_t *node;
+  Int pid;
+  long memsize;
+ }; 
+ Viết một chương trình ứng dụng lấy thông tin từ syscall vừa xây dựng. Sắp xếp danh sách theo thứ tự memsize (với memsize là kích thước bộ nhớ của tiến trình) tăng dần
+ b) Tìm hiểu và trình bày cơ chế hoạt động của sequence lock. Trên máy ảo vừa xây dựng, xây dựng một thread để cập nhật và một thread để hiển thị danh sách liên kết proc_info khi tạo thêm thread mới. Sử dụng sequence lock để đồng bộ."
+
 Buildroot is a simple, efficient and easy-to-use tool to generate embedded
 Linux systems through cross-compilation.
 
